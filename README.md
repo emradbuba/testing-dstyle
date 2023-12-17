@@ -51,16 +51,11 @@ public class BusinessLogicExecutor {
 
 ## AssertObject
 
-A nice design pattern for performing repetitive assertions in more readable way. 
+A nice design pattern for performing repetitive assertions in more readable way. Can be also use to create more business friendly assertion code. 
 
 ### Example problem: 
 
-Let's assume we have a service producing some products which should fulfil some specific criteria: 
-* has a name
-* is seasonal (and only seasonal)
-* it's price is lowest since last two months
-
-Having such product: 
+We have a product:
 ```java
 public class Product {
     private String productName;
@@ -68,6 +63,12 @@ public class Product {
     private PriceHistory priceHistory;
 }
 ```
+
+Let's assume we have a service producing products, some of which should fulfil following specific criteria: 
+* product has a name
+* product is seasonal (and only seasonal)
+* product's price is lowest since last two months
+
 
 the assertion checking this can be quite complicated:
 ```java
